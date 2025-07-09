@@ -1,0 +1,154 @@
+/* Import realistic typewriter font */
+@import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
+
+/* Basic page settings */
+body {
+  font-family: 'Special Elite', Courier, monospace;
+  background: #f9f4e8 url('https://www.transparenttextures.com/patterns/pwsh-green-textured.png') repeat;
+  color: #2b2b2b;
+  margin: 0;
+  line-height: 1.8;
+  letter-spacing: 0.05em;
+  text-shadow: 0.02em 0.02em 0.015em rgba(0,0,0,0.05);
+}
+
+/* Container: just spacing */
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* Header: black, no box */
+header {
+  background: #2c2c2c;
+  color: #f9f4e8;  /* text color */
+  padding: 2rem 0;
+  border-bottom: 3px solid #a03e3e;
+  text-align: center;
+  letter-spacing: 0.1em;
+  user-select: none;
+}
+
+header .container {
+  background: none;
+  padding: 0;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+  font-weight: normal;
+  display: inline-block;
+  position: relative;
+}
+
+/* Blinking cursor matches header text color */
+header h1::after {
+  content: '|';
+  margin-left: 0; /* no gap! */
+  animation: blink 1.2s steps(1) infinite;
+  color: #f9f4e8;
+}
+
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
+
+/* Navigation */
+nav {
+  margin-top: 1rem;
+}
+
+nav a {
+  color: #f9f4e8;
+  margin: 0 1rem;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1rem;
+  border-bottom: 2px solid transparent;
+  padding-bottom: 0.1rem;
+  transition: border-bottom 0.25s ease;
+}
+
+nav a:hover {
+  border-bottom: 2px solid #a03e3e;
+}
+
+/* Section heading with dashed underline */
+h2 {
+  font-weight: normal;
+  font-size: 1.8rem;
+  letter-spacing: 0.1em;
+  margin-bottom: 0.2rem;
+  position: relative;
+}
+
+h2::after {
+  content: "----------------------------";
+  display: block;
+  color: #a03e3e;
+  font-family: 'Special Elite', Courier, monospace;
+  font-size: 0.9rem;
+  margin-top: 0.2rem;
+}
+
+/* Review grid */
+.reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+}
+
+.review-card {
+  background: #f9f4e8;
+  border: 2px solid #a03e3e;
+  padding: 1rem;
+  box-shadow: 3px 3px 0 #7a2d2d;
+  transition: transform 0.15s ease;
+}
+
+.review-card:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 5px 5px 0 #7a2d2d;
+}
+
+.review-card img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 0.8rem;
+  box-shadow: 1px 1px 0 #7a2d2d;
+}
+
+.review-info h3 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.2rem;
+}
+
+.review-info a {
+  color: #2b2b2b;
+  text-decoration: none;
+}
+
+.review-info a:hover {
+  text-decoration: underline;
+}
+
+.rating {
+  font-weight: bold;
+  color: #a03e3e;
+  margin-bottom: 0.7rem;
+  letter-spacing: 0.1em;
+  font-size: 1.1rem;
+}
+
+/* Footer */
+footer {
+  background: #2c2c2c;
+  color: #f9f4e8;
+  padding: 2rem 0;
+  text-align: center;
+  font-size: 0.9rem;
+  letter-spacing: 0.05em;
+}
