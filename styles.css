@@ -101,12 +101,15 @@ h2::after {
   gap: 2rem;
 }
 
-.review-card {
-  background: #f9f4e8;
-  border: 2px solid #a03e3e;
-  padding: 1rem;
-  box-shadow: 3px 3px 0 #7a2d2d;
-  transition: transform 0.15s ease;
+.review-card img {
+  width: 100%;         /* fills the card’s width */
+  height: auto;        /* keeps aspect ratio */
+  max-height: 400px;   /* adjust this if needed */
+  object-fit: cover;   /* crops excess if the aspect ratio is odd */
+  border: 1px solid #a03e3e;  /* optional: frame the poster */
+  box-shadow: 1px 1px 0 #7a2d2d;
+  margin-bottom: 0.8rem;
+  display: block;
 }
 
 .review-card:hover {
