@@ -101,12 +101,22 @@ h2::after {
   gap: 2rem;
 }
 
+/* Review card container */
+.review-card {
+  background: #f9f4e8;
+  border: 2px solid #a03e3e;
+  padding: 0.8rem;
+  box-shadow: 2px 2px 0 #7a2d2d;
+  max-width: 280px; /* matches poster + text comfortably */
+}
+
+/* Review poster image */
 .review-card img {
-  width: 250px;
+  width: 100%;
   max-width: 250px;  /* adjust as you like */
   height: auto;
   display: block;
-  margin: 0 0 0.8rem 0; /* no centering */
+  margin: 0 0 0.8rem 0; /* left aligned, no centering */
   border: 1px solid #a03e3e;
   box-shadow: 1px 1px 0 #7a2d2d;
 }
@@ -115,17 +125,9 @@ h2::after {
   text-align: left;
 }
 
-
 .review-card:hover {
   transform: translate(-2px, -2px);
   box-shadow: 5px 5px 0 #7a2d2d;
-}
-
-.review-card img {
-  width: 100%;
-  height: auto;
-  margin-bottom: 0.8rem;
-  box-shadow: 1px 1px 0 #7a2d2d;
 }
 
 .review-info h3 {
